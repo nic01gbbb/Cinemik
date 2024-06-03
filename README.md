@@ -2,10 +2,11 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/nic01gbbb/CinemikFrontend/blob/main/LICENSE)
 
-Esta aplicação é a primeira parte do projeto de controle de usuário de um cinema.
-Uma API Rest para controle de dados,ela armazena cadastro de usuários e acentos da sessão.
+Esta aplicação é projeto full-stack de controle de usuário de um cinema.
+no backend Uma API Rest para controle de dados,ela armazena cadastro de usuários e acentos da sessão.
 
-<h2>Funcionalidades</h2>
+
+<h2>Funcionalidades do projeto</h2>
 
 - Armazenar os dados da sessão do cinema
 - Armazenar os dados dos usuários
@@ -15,11 +16,28 @@ Uma API Rest para controle de dados,ela armazena cadastro de usuários e acentos
 
  <h2>  Tecnologias utilizadas </h2>
 
-  <div    justify:"space-between"  >
+### Tecnologias usadas no backend 
+
+ <div    justify:"space-between"  >
 <img  src="https://miro.medium.com/v2/resize:fit:800/1*v2vdfKqD4MtmTSgNP0o5cg.png" width="100px"   />
 <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi0TfiDi7n-zqrSDMcUPVBFv4SVKqzhIQzrg&s"  width="100px"   />
 <img  src="https://media.licdn.com/dms/image/D5612AQH-HrWdn6BhYg/article-cover_image-shrink_720_1280/0/1677358366310?e=2147483647&v=beta&t=1Rn8YVto_7vIkYVWvNSR72E-jj7E8GHlC07ozVhhIZM" width="200px"   />
   </div>
+
+ <div    justify:"space-between"  >
+<img  src="https://mariosfakiolas.com/uploads/react.jpeg" width="200px"   />
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 
 <h2>Inicialização</h2>
 
