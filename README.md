@@ -24,8 +24,10 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
 <img  src="https://media.licdn.com/dms/image/D5612AQH-HrWdn6BhYg/article-cover_image-shrink_720_1280/0/1677358366310?e=2147483647&v=beta&t=1Rn8YVto_7vIkYVWvNSR72E-jj7E8GHlC07ozVhhIZM" width="200px"   />
   </div>
 
+### Tecnologias usadas no frontend
+
  <div    justify:"space-between"  >
-<img  src="https://mariosfakiolas.com/uploads/react.jpeg" width="200px"   />
+<img  src="### Tecnologias usadas no backend " width="200px"   />
   </div>
 
 
