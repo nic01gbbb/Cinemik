@@ -32,6 +32,11 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
 <img  src="https://marketplacedesignoye.s3.ap-south-1.amazonaws.com/css-programming-language-icon-symbol-logo-vector-_627.png" width="100px"   />
  </div>
 
+##Como esta meu projeto 
+
+![Captura de tela 2024-06-03 165757](https://github.com/nic01gbbb/Cinemik/assets/148110086/2723b097-0396-4c20-99be-17a39d8805de)
+
+![Captura de tela 2024-06-03 170114](https://github.com/nic01gbbb/Cinemik/assets/148110086/35d41221-89bc-4354-9fca-e5cb95e77965)
 
 
 
