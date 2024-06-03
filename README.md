@@ -21,15 +21,15 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
  <div    justify:"space-between"  >
 <img  src="https://miro.medium.com/v2/resize:fit:800/1*v2vdfKqD4MtmTSgNP0o5cg.png" width="100px" heigth="200px"  />
 <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi0TfiDi7n-zqrSDMcUPVBFv4SVKqzhIQzrg&s"  width="100px" heigth="200px"  />
-<img  src="https://media.licdn.com/dms/image/D5612AQH-HrWdn6BhYg/article-cover_image-shrink_720_1280/0/1677358366310?e=2147483647&v=beta&t=1Rn8YVto_7vIkYVWvNSR72E-jj7E8GHlC07ozVhhIZM" width="100px" heigth="200px"   />
+<img  src="https://media.licdn.com/dms/image/D5612AQH-HrWdn6BhYg/article-cover_image-shrink_720_1280/0/1677358366310?e=2147483647&v=beta&t=1Rn8YVto_7vIkYVWvNSR72E-jj7E8GHlC07ozVhhIZM" width="200px" heigth="200px"   />
   </div>
 
 ### Tecnologias usadas no frontend
 
  <div    justify:"space-between"  >
 <img  src="https://cdn0.iconfinder.com/data/icons/logos-brands-in-colors/128/react-512.png" width="100px"   />
-<img  src="https://user-images.githubusercontent.com/16843090/101181820-f3a63780-3612-11eb-9d3a-05452f2b0ad8.png" width="100px"   />
-<img  src="https://marketplacedesignoye.s3.ap-south-1.amazonaws.com/css-programming-language-icon-symbol-logo-vector-_627.png" width="100px"   />
+<img  src="https://user-images.githubusercontent.com/16843090/101181820-f3a63780-3612-11eb-9d3a-05452f2b0ad8.png" width="100px" heigth="200px"   />
+<img  src="https://marketplacedesignoye.s3.ap-south-1.amazonaws.com/css-programming-language-icon-symbol-logo-vector-_627.png" width="100px" heigth="200px"   />
  </div>
 
 ## Como esta meu projeto 
