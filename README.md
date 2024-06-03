@@ -27,7 +27,7 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
 ### Tecnologias usadas no frontend
 
  <div    justify:"space-between"  >
-<img  src="### Tecnologias usadas no backend " width="200px"   />
+<img  src="https://cdn0.iconfinder.com/data/icons/logos-brands-in-colors/128/react-512.png " width="200px"   />
   </div>
 
 
