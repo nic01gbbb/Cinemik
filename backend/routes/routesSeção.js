@@ -1,5 +1,5 @@
 const routesSeção = require("express").Router();
-const secaoController = require("../src/controllers/seçãoController.js");
+const secaoController = require("../controllers/seçãoController");
 
 routesSeção.post("/createsecao", secaoController.createSeção);
 routesSeção.get("/Listcoluna1", secaoController.Listcoluna1);

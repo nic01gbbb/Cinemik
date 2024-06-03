@@ -1,4 +1,4 @@
-require("./src/db/connect.js");
+require("./db/connect.js");
 require("dotenv").config();
 const routesBase = require("./routes/RoutesBase.js");
 const cors = require("cors");
