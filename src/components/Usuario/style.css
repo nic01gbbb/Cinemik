@@ -1,0 +1,152 @@
+.Usuario {
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+}
+.h1cadastrarusuarios {
+  text-align: center;
+  color: purple;
+  display: flex;
+  margin: -55px auto 105px;
+}
+
+.formUsuariosC {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #111;
+  padding: 10px;
+}
+.formUsuariosC input {
+  width: 300px;
+  border-radius: 8px;
+  border: 0;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.formdeleteUsuario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: red;
+  padding: 10px;
+}
+.formdeleteUsuario input {
+  width: 300px;
+  border-radius: 8px;
+  border: 0;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.cadastrarusuarios {
+  background-color: blueviolet;
+  width: 200px;
+  padding: 8px;
+  border: 0;
+  margin-top: 15px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.8);
+}
+.erro {
+  background-color: black;
+  margin-top: 5px;
+  border-radius: 8px;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 10px;
+}
+.concluido {
+  width: 100vw;
+  max-width: 500px;
+  background-color: black;
+  opacity: 0.8;
+  padding: 15px;
+  margin: 0 auto;
+  height: 100px;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+}
+.okconcluido {
+  padding: 15px;
+  border-radius: 8px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: blueviolet;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: -5px;
+}
+.backcontrole {
+  background-color: #222;
+  color: red;
+  font-size: 10px;
+  padding: 5px;
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  margin-left: -40px;
+}
+
+.deletarUsuario {
+  padding: 15px;
+  border-radius: 8px;
+  border-radius: 50%;
+  right: 35px;
+  top: 35px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  color: white;
+}
+
+.DeletaEcadastra {
+  margin: 100px auto;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 909px) {
+    width: 600px;
+  }
+  @media (max-width: 640px) {
+    width: 400px;
+  }
+  @media (max-width: 453px) {
+    width: 200px;
+  }
+}
+.deletarUsuario {
+  @media (max-width: 640px) {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

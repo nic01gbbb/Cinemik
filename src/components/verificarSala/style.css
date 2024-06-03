@@ -1,0 +1,167 @@
+.VerificarSala {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("https://images.adsttc.com/media/images/58d5/3a58/e58e/ce48/a700/003f/newsletter/002.jpg?1490369108");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.h1vs {
+  text-align: center;
+  display: flex;
+  margin: 0px auto;
+  background-color: black;
+  height: 100px;
+  align-items: center;
+  padding: 10px 15px 25px;
+  color: white;
+  width: 100%;
+  opacity: 0.8;
+}
+.spanSala {
+  color: #c71585;
+}
+.btnVS {
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background-color: black;
+  color: #c71585;
+  cursor: pointer;
+  z-index: 2;
+  @media (max-width: 500px) {
+    padding: 5px;
+    font-size: 10px;
+  }
+}
+.formVS {
+  margin-top: 150px;
+  margin: 180px auto;
+  width: 100%;
+  max-width: 300px;
+}
+.formVS input {
+  width: 100%;
+  max-width: 580px;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 0;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.8);
+  background-color: #c71585;
+  color: white;
+  font-weight: 800;
+}
+.btnVSform {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 0;
+  font-weight: 700;
+  width: 100px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.Vstabela {
+  background-color: #c71585;
+}
+.Tabela2 {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: black;
+}
+.ConteudoTabela2 {
+  display: grid;
+  grid-template-columns: repeat(17, 40px);
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  @media (max-width: 920px) {
+    grid-template-columns: repeat(17, 30px);
+    gap: 5px;
+    margin-top: 100px;
+  }
+  @media (max-width: 628px) {
+    grid-template-columns: repeat(17, 25px);
+    gap: 4px;
+  }
+  @media (max-width: 524px) {
+    grid-template-columns: repeat(17, 22px);
+    gap: 2px;
+  }
+  @media (max-width: 435px) {
+    grid-template-columns: repeat(17, 20px);
+    gap: 2px;
+  }
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(17, 15px);
+    gap: 3px;
+  }
+}
+.h3Tabela2 {
+  margin-bottom: -90px;
+  @media (max-width: 920px) {
+    font-size: 16px;
+  }
+  @media (max-width: 524px) {
+    font-size: 12px;
+  }
+  @media (max-width: 400px) {
+    font-size: 10px;
+  }
+}
+
+.ConteudoTabela2 p {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 920px) {
+    width: 30px;
+    height: 35px;
+    font-size: 12px;
+  }
+  @media (max-width: 628px) {
+    width: 20px;
+    height: 30px;
+    font-size: 10px;
+    padding: 12px;
+  }
+  @media (max-width: 524px) {
+    width: 10px;
+    height: 20px;
+    font-size: 8px;
+    padding: 10px;
+  }
+  @media (max-width: 435px) {
+    width: 8px;
+    height: 10px;
+    font-size: 8px;
+    padding: 10px;
+  }
+  @media (max-width: 400px) {
+    width: 5px;
+    height: 8px;
+    font-size: 6px;
+    padding: 8px;
+  }
+}
+.backVStabela {
+  @media (max-width: 450px) {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    border: 0;
+  }
+}

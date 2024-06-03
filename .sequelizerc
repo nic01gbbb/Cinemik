@@ -1,0 +1,14 @@
+const { config } = require("dotenv");
+const path = require("path");
+
+module.exports = {
+  config: path.resolve(__dirname, "config", "config.json"),
+  "migrations-path": path.resolve(
+    __dirname,
+    "src",
+    "db",
+    "migrations",
+    "usuario"
+  ),
+};
+//
