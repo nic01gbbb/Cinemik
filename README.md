@@ -54,7 +54,7 @@ A preparação consiste em instalar as tecnologias de acordo com seu sistema ope
 
 Depois de instalado as tecnologias, crie uma conta em mysql workbench,ambiente para controle das tabelas "usuario" e "sessão".
 Com as tecnologias instaladas o próximo passo é criar um banco de dados mysql,para isso configure os dados da conta do banco
-criada no arquivo config.json, da pasta config.Assim que os dados forem configurados use o comando: "npx sequelize db:create" e
+no arquivo config.json, da pasta config.Assim que os dados forem configurados use o comando: "npx sequelize db:create" e
 o banco será criado.
 Terminado o banco, será necessário criar as tabelas,para isso primeiramente configure seus dados no arquivo connect.js
 da pasta db, sobre a conta em mysql workbench,La passará o nome do host,nome do usuário,senha e dialect.
