@@ -69,10 +69,10 @@ Repita o mesmo processo da criação da tabela "usuário", copiando o arquivo an
 use novamente o comando:"npx sequelize db:migrate,assim será criado a tabela de sessão, e a aplicação estará pronta para ser rodada.
 </p>
 
-## Modo de configuração para o frontend
+### Modo de configuração para o frontend
 
 <p>
-Para o frontend basta digitar o comando no terminal: **npm run dev**, e clicar no link que abrirá em alguns segundos.
+Para configurar o frontend, basta digitar o comando no terminal:"npm run dev",e clicar no link que abrirá em alguns segundos.
 </p>
 
 
