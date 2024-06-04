@@ -21,7 +21,7 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
  <div    justify:"space-between"  >
 <img  src="https://miro.medium.com/v2/resize:fit:800/1*v2vdfKqD4MtmTSgNP0o5cg.png" width="100px" heigth="200px"  />
 <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi0TfiDi7n-zqrSDMcUPVBFv4SVKqzhIQzrg&s"  width="100px" heigth="200px"  />
-<img  src="https://static-00.iconduck.com/assets.00/sequelize-original-icon-885x1024-r8dswyvj.png" width="100px" heigth="200px"   />
+<img  src="https://static-00.iconduck.com/assets.00/sequelize-original-icon-885x1024-r8dswyvj.png" width="0px" heigth="200px"   />
   </div>
 
 ### Tecnologias usadas no frontend
