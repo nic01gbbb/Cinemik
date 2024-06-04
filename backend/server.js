@@ -1,5 +1,4 @@
 require("./db/connect.js");
-require("dotenv").config();
 const routesBase = require("./routes/RoutesBase.js");
 const cors = require("cors");
 const express = require("express");
@@ -14,7 +13,7 @@ app.use(cors());
 
 app.use(routesBase);
 
-const port = process.env.PORT;
+const port = 3737;
 
 app.listen(port, function () {
   console.log({ msg: "Ouvindo na porta:" + port });
