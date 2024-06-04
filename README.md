@@ -63,12 +63,12 @@ no arquivo config.json da pasta config,será requirido seu username,host,passwor
 Assim que os dados forem configurados use o comando: "npx sequelize db:create" e o banco será criado.
 Criado o banco, será necessário criar as tabelas,para isso primeiramente configure seus dados no arquivo connect.js
 da pasta db, sobre a conta em mysql workbench,La passará o host,username,e password.
-Com a configurações do arquivo connect.js pronto, dentro da pasta migrations, existem duas pastas com os nomes:"usuario" e "sessao" e
+Com a configurações do arquivo connect.js pronto, dentro da pasta "db" e dentro da pasta "migrations",existem duas pastas com os nomes:"usuario" e "sessao" e
 ambas com arquivos já criados.
 Com o comando "npx sequelize migration:create --name=usuario",criará um novo arquivo na pasta usuário,copie todo o arquivo anterior da mesma pasta e 
 troque todo o arquivo novo pelo arquivo copiado,use o comando: "npx sequelize db:migrate",assim a tabela
 de usuários será criada no banco de dados.
-Para criar a tabela de sessão,no arquivo .sequelizerc troque o nome:"usuário" dentro de "migrations-path" por "sessão" e
+Para criar a tabela de sessão,no arquivo .sequelizerc troque o nome "usuário" dentro de "migrations-path" por "sessão" e
 use o comando "npx sequelize migration:create --name=sessão".
 Repita o mesmo processo da criação da tabela "usuário", copiando o arquivo anterior com o nome "sessao" e trocando o arquivo criado pelo copiado,
 use novamente o comando:"npx sequelize db:migrate,assim será criado a tabela de sessão, e a aplicação estará pronta para ser rodada.
