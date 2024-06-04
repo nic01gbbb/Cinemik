@@ -38,16 +38,6 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
 
 ![Captura de tela 2024-06-03 170114](https://github.com/nic01gbbb/Cinemik/assets/148110086/35d41221-89bc-4354-9fca-e5cb95e77965)
 
-
-
-
-
-
-
-
-
-
-
 <h2>Inicialização</h2>
 
 Este projeto foi desenvolvido em ambiente windows utilizando as tecnologias citadas anteriormente.
@@ -78,4 +68,4 @@ use novamente o comando:"npx sequelize db:migrate,assim será criado a tabela de
 
 </p>
 
-#Para rodar a aplicação use o comando "npm run dev"
+**Para rodar a aplicação use o comando "npm run dev"**
