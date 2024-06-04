@@ -67,6 +67,7 @@ Para criar a tabela de sessão,no arquivo .sequelizerc troque o nome:"usuário" 
 use o comando "npx sequelize migration:create --name=sessão.
 Repita o mesmo processo da criação da tabela "usuário", copiando o arquivo anterior com o nome "sessao" e trocando o arquivo criado pelo copiado,
 use novamente o comando:"npx sequelize db:migrate,assim será criado a tabela de sessão, e a aplicação estará pronta para ser rodada.
+Use o comando: "npm run dev",para rodar a API. 
 </p>
 
 ### Modo de configuração para o frontend
