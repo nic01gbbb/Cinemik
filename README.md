@@ -56,11 +56,13 @@ requisitos da aplicação.A preparação consiste em instalar as tecnologias de 
 Depois de instalado as tecnologias necessárias,clique no link principal da aplicação,em code faça o download de zip para clonar o projeto.
 Depois de baixar a pasta,clique com o botão direito do mouse na mesma e extraia todo o arquivo,dentro da pasta extraida em terminal digite o comando:
 "code.",para abrir o editor.
-Com as tecnologias instaladas o próximo passo é criar um banco de dados mysql,para isso configure os dados da conta do banco
-no arquivo config.json  da pasta config,será requirido seu username,host,password,dialect e o nome do banco de sua escolha em database.
+Dentro do Visual Studio Code clique com o botão direito do mouse na pasta: "backend",em seguida abra o terminal e instale as dependências com 
+"npm install".
+Com as dependências instaladas o próximo passo é criar um banco de dados mysql,para isso configure os dados da conta do banco
+no arquivo config.json da pasta config,será requirido seu username,host,password,dialect e o nome do banco de sua escolha em database.
 Assim que os dados forem configurados use o comando: "npx sequelize db:create" e o banco será criado.
-Terminado o banco, será necessário criar as tabelas,para isso primeiramente configure seus dados no arquivo connect.js
-da pasta db, sobre a conta em mysql workbench,La passará o nome do host,nome do usuário,senha e dialect.
+Criado o banco, será necessário criar as tabelas,para isso primeiramente configure seus dados no arquivo connect.js
+da pasta db, sobre a conta em mysql workbench,La passará o host,username,e password.
 Com a configurações do arquivo connect.js pronto, dentro da pasta migrations, existem duas pastas com os nomes:"usuario" e "sessao" e
 ambas com arquivos já criados.
 Com o comando "npx sequelize migration:create --name=usuario" criará um novo arquivo na pasta usuário,copie todo o arquivo anterior  
