@@ -49,16 +49,15 @@ requisitos da aplicação.A preparação consiste em instalar as tecnologias de 
 ### Modo de configuração para o backend
 
 
- O modo de uso consiste basicamente em criar um banco de dados e as tabelas de usuário e sessão,Para isso 
+ O modo de uso consiste basicamente em criar um banco de dados e as tabelas de usuário e sessão,para isso 
  primeiramente instale "mysql workebench",<a> https://dev.mysql.com/downloads/workbench</a>,
  ambiente próprio para criação e manipulação das tabelas,crie sua conta e após isso siga todo o caminho abaixo.
 
-
 Depois de instalado as tecnologias necessárias,clique no link principal da aplicação,em code faça o download de zip para clonar o projeto.
-Depois de baixado,clique com o botão direito do mouse na pasta e extraia todo o arquivo,dentro da pasta extraida em terminal digite o comando:
+Depois de baixar a pasta,clique com o botão direito do mouse na mesma e extraia todo o arquivo,dentro da pasta extraida em terminal digite o comando:
 "code.",para abrir o editor.
 Com as tecnologias instaladas o próximo passo é criar um banco de dados mysql,para isso configure os dados da conta do banco
-no arquivo config.json, da pasta config,será requirido seu username,host,password,dialect e o nome do banco de sua escolha em database.
+no arquivo config.json  da pasta config,será requirido seu username,host,password,dialect e o nome do banco de sua escolha em database.
 Assim que os dados forem configurados use o comando: "npx sequelize db:create" e o banco será criado.
 Terminado o banco, será necessário criar as tabelas,para isso primeiramente configure seus dados no arquivo connect.js
 da pasta db, sobre a conta em mysql workbench,La passará o nome do host,nome do usuário,senha e dialect.
