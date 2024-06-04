@@ -44,7 +44,7 @@ Este projeto foi desenvolvido em ambiente windows utilizando as tecnologias cita
 "Visual Studio Code",programa bem eficiente que atende todos os requisitos da aplicação.A preparação consiste em 
 instalar as tecnologias de acordo com seu sistema operacional.
 
-- Link do site para baixar o Vizual Studio Code:<a>https://code.visualstudio.com/download<a/>
+- Link para baixar o Vizual Studio Code:<a>https://code.visualstudio.com/download<a/>
 
 <h2>Modo de configuração para uso</h2>
 
@@ -52,14 +52,13 @@ instalar as tecnologias de acordo com seu sistema operacional.
 
 <p>
 <p> O modo de uso consiste basicamente em criar um banco de dados e as tabelas de usuário e sessão,Para isso 
- siga todo o caminho abaixo.
+ primeiramente instale "mysql workebench",ambiente próprio para criação e manipulação das tabelas:"usuario e sessao",
+ neste link:<a> https://dev.mysql.com/downloads/workbench/</a>,crie sua conta e após isso siga todo o caminho abaixo.
 </p>
 
-Depois de instalado as tecnologias necessárias,clique no link principal da aplicação,vá em code,faça o download de zip para clonar o projeto.
+Depois de instalado as tecnologias necessárias,clique no link principal da aplicação,em code faça o download de zip para clonar o projeto.
 Depois de baixado,clique com o botão direito do mouse na pasta e extraia todo o arquivo,dentro da pasta extraida em terminal digite o comando:
-"code.",para abrir o editor
-
-crie uma conta em mysql workbench,ambiente para controle das tabelas "usuario" e "sessão".
+"code.",para abrir o editor.
 Com as tecnologias instaladas o próximo passo é criar um banco de dados mysql,para isso configure os dados da conta do banco
 no arquivo config.json, da pasta config,será requirido seu username,host,password,dialect e o nome do banco de sua escolha em database.
 Assim que os dados forem configurados use o comando: "npx sequelize db:create" e o banco será criado.
