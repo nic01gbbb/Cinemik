@@ -53,7 +53,7 @@ requisitos da aplicação.A preparação consiste em instalar as tecnologias de 
  primeiramente instale "mysql workebench",<a> https://dev.mysql.com/downloads/workbench</a>,
  ambiente próprio para criação e manipulação das tabelas,crie sua conta e após isso siga todo o caminho abaixo.
 
-Depois de instalado as tecnologias necessárias,clique no link principal da aplicação,em code faça o download de zip para clonar o projeto.
+Depois de instalado as tecnologias necessárias,ainda no github,clique no link principal do projeto,em code faça o download de zip para clonar o projeto.
 Depois de baixar a pasta,clique com o botão direito do mouse na mesma e extraia todo o arquivo,dentro da pasta extraida em terminal digite o comando:
 "code.",para abrir o editor.
 Dentro do Visual Studio Code clique com o botão direito do mouse na pasta: "backend",em seguida abra o terminal e instale as dependências com 
@@ -78,7 +78,8 @@ Use o comando: "npm run dev",para rodar a API.
 ### Modo de configuração para o frontend
 
 <p>
-Para configurar o frontend, basta digitar o comando no terminal:"npm run dev",e clicar no link que abrirá em alguns segundos.
+Para configurar o frontend,dentro de Visual Studio Code,clique com o botão direito na pasta:"frontend",use o comando npm install e 
+acione o terminal.Basta digitar o comando:"npm run dev",e clicar no link que abrirá em alguns segundos.
 </p>
 
 
