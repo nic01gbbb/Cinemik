@@ -8,8 +8,8 @@ const Sequelize = require("sequelize");
 
 //Coloque o nome de eu banco de dados,seu username e password//
 
-const connect = new Sequelize("cinemadb", "root", "voudev01", {
-  host: "localhost",
+const connect = new Sequelize("database", "username", "password", {
+  host: "",
   dialect: "mysql",
   define: {
     timestamps: true,
