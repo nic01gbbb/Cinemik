@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/nic01gbbb/Cinemik/blob/main/LICENSE)
 
-Esta aplicação é projeto full-stack de controle de usuário de um cinema.
+Esta aplicação é um projeto full-stack de controle de usuário de um cinema.
 no backend Uma API Rest para controle de dados,ela armazena cadastro de usuários e acentos da sessão.
 
 
