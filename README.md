@@ -50,8 +50,8 @@ requisitos da aplicação.A preparação consiste em instalar as tecnologias de 
 
 <p>
 <p> O modo de uso consiste basicamente em criar um banco de dados e as tabelas de usuário e sessão,Para isso 
- primeiramente instale "mysql workebench",ambiente próprio para criação e manipulação das tabelas,
- :<a> https://dev.mysql.com/downloads/workbench/</a>,crie sua conta e após isso siga todo o caminho abaixo.
+ primeiramente instale "mysql workebench", ambiente próprio para criação e manipulação das tabelas
+ :<a> https://dev.mysql.com/downloads/workbench/ </a>,instale,crie sua conta e após isso siga todo o caminho abaixo.
 </p>
 
 Depois de instalado as tecnologias necessárias,clique no link principal da aplicação,em code faça o download de zip para clonar o projeto.
