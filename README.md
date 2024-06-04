@@ -48,13 +48,11 @@ requisitos da aplicação.A preparação consiste em instalar as tecnologias de 
 
 ### Modo de configuração para o backend
 
-<p>
-<p> O modo de uso consiste basicamente em criar um banco de dados e as tabelas de usuário e sessão,Para isso 
- primeiramente instale "mysql workebench",<a>
-  https://dev.mysql.com/downloads/workbench</a>,
- ambiente próprio para criação e manipulação das tabelas
-,crie sua conta e após isso siga todo o caminho abaixo.
-</p>
+
+ O modo de uso consiste basicamente em criar um banco de dados e as tabelas de usuário e sessão,Para isso 
+ primeiramente instale "mysql workebench",<a> https://dev.mysql.com/downloads/workbench</a>,
+ ambiente próprio para criação e manipulação das tabelas,crie sua conta e após isso siga todo o caminho abaixo.
+
 
 Depois de instalado as tecnologias necessárias,clique no link principal da aplicação,em code faça o download de zip para clonar o projeto.
 Depois de baixado,clique com o botão direito do mouse na pasta e extraia todo o arquivo,dentro da pasta extraida em terminal digite o comando:
