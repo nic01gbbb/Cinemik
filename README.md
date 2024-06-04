@@ -41,10 +41,9 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
 <h2>Inicialização</h2>
 
 Este projeto foi desenvolvido em ambiente windows utilizando as tecnologias citadas anteriormente e feito no 
-"Visual Studio Code",programa bem eficiente que atende todos os requisitos da aplicação.A preparação consiste em 
-instalar as tecnologias de acordo com seu sistema operacional.
+"Visual Studio Code",<a>https://code.visualstudio.com/download<a/>programa bem eficiente que atende todos os 
+requisitos da aplicação.A preparação consiste em instalar as tecnologias de acordo com seu sistema operacional.
 
-- Link para baixar o Vizual Studio Code:<a>https://code.visualstudio.com/download<a/>
 
 <h2>Modo de configuração para uso</h2>
 
@@ -52,8 +51,8 @@ instalar as tecnologias de acordo com seu sistema operacional.
 
 <p>
 <p> O modo de uso consiste basicamente em criar um banco de dados e as tabelas de usuário e sessão,Para isso 
- primeiramente instale "mysql workebench",ambiente próprio para criação e manipulação das tabelas:"usuario e sessao",
- neste link:<a> https://dev.mysql.com/downloads/workbench/</a>,crie sua conta e após isso siga todo o caminho abaixo.
+ primeiramente instale "mysql workebench",ambiente próprio para criação e manipulação das tabelas,
+ :<a> https://dev.mysql.com/downloads/workbench/</a>,crie sua conta e após isso siga todo o caminho abaixo.
 </p>
 
 Depois de instalado as tecnologias necessárias,clique no link principal da aplicação,em code faça o download de zip para clonar o projeto.
