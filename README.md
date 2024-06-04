@@ -1,4 +1,4 @@
-<h1>API cinemik</h1>
+<h1>Cinemik</h1>
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/nic01gbbb/CinemikFrontend/blob/main/LICENSE)
 
