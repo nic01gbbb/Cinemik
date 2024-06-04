@@ -78,8 +78,9 @@ Use o comando: "npm run dev",para rodar a API.
 ### Modo de configuração para o frontend
 
 <p>
-Para configurar o frontend,dentro de Visual Studio Code,clique com o botão direito na pasta:"frontend",para acionar o terminal e
-use o comando: "npm install"para baixar as dependèncias.Após basta digitar o comando:"npm run dev",e clicar no link que abrirá em alguns segundos.
+Para configurar o frontend,dentro de Visual Studio Code,clique com o botão direito na pasta: "frontend",para acionar o terminal e
+use o comando: "npm install"para baixar as dependèncias.
+Após, basta digitar o comando: "npm run dev" e clicar no link que abrirá em alguns segundos.
 </p>
 
 
