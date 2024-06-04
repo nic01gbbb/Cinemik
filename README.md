@@ -40,8 +40,7 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
 
 <h2>Inicialização</h2>
 
-Este projeto foi desenvolvido em ambiente windows utilizando as tecnologias citadas anteriormente e feito no 
-"Visual Studio Code",<a>https://code.visualstudio.com/download<a/>programa bem eficiente que atende todos os 
+Este projeto foi desenvolvido em ambiente windows utilizando as tecnologias citadas anteriormente e feito no "Visual Studio Code"<a> https://code.visualstudio.com/download<a/> programa bem eficiente que atende todos os 
 requisitos da aplicação.A preparação consiste em instalar as tecnologias de acordo com seu sistema operacional.
 
 
