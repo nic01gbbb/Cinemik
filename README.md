@@ -71,9 +71,9 @@ O próximo passo é criar um banco de dados mysql,para isso configure os dados d
 no arquivo config.json da pasta config,será requirido seu username,host,password,dialect e o nome do banco de sua escolha em database.
 Assim que os dados forem configurados use o comando no terminal: "npx sequelize db:create" e o banco será criado.
 Criado o banco, será necessário criar as tabelas "usuario" e "sessao",para isso use o comando: "npx sequelize db:migrate, assim será
-criado a tabela de usuários.Para criar a tabela de sessões,no arquivo "connect.js" da pasta "db", em "path.resolve" de "migrations-path",
-troque a palavra "usuario" por "sessao".Use novamente o comando:"npx sequelize db:migrate" e assim será criado a tabela de sessões.
-
+criado a tabela de usuários.Para criar a tabela de sessões,no arquivo ".sequelizerc" que esta na raiz da pasta "backend", em "path.resolve" 
+de "migrations-path",troque a palavra "usuario" por "sessao".Use novamente o comando:"npx sequelize db:migrate" e assim será criado a tabela de sessões.
+Configue seus dados da conta do banco no arquivo "connect.js" da pasta "db" e após use o comando: "npm run dev" para rodar a API.
 </p>
 
 ### Modo de configuração para o frontend
