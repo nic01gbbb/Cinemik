@@ -22,7 +22,7 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
 <img  src="https://miro.medium.com/v2/resize:fit:800/1*v2vdfKqD4MtmTSgNP0o5cg.png" width="100px" heigth="200px"  />
 <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi0TfiDi7n-zqrSDMcUPVBFv4SVKqzhIQzrg&s"  width="100px" heigth="200px"  />
 <img  src="https://static-00.iconduck.com/assets.00/sequelize-original-icon-885x1024-r8dswyvj.png" width="80px" heigth="200px"   />
-  </div>
+</div>
 
 ### Tecnologias usadas no frontend
 
@@ -38,7 +38,7 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
 
 ![Captura de tela 2024-06-03 170114](https://github.com/nic01gbbb/Cinemik/assets/148110086/35d41221-89bc-4354-9fca-e5cb95e77965)
 
-![Captura de tela 2024-06-05 160745](https://github.com/nic01gbbb/Cinemik/assets/148110086/e84171cf-c91e-4d98-96ad-78eccb58947a)
+![Captura de tela 2024-06-05 163715](https://github.com/nic01gbbb/Cinemik/assets/148110086/9405659e-9d56-4253-8583-a8bdcc65b14f)
 
 
 
