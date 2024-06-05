@@ -36,9 +36,9 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
 
 ![Captura de tela 2024-06-03 165757](https://github.com/nic01gbbb/Cinemik/assets/148110086/2723b097-0396-4c20-99be-17a39d8805de)
 
-![Captura de tela 2024-06-03 170114](https://github.com/nic01gbbb/Cinemik/assets/148110086/35d41221-89bc-4354-9fca-e5cb95e77965)
-
 ![Captura de tela 2024-06-05 163715](https://github.com/nic01gbbb/Cinemik/assets/148110086/9405659e-9d56-4253-8583-a8bdcc65b14f)
+
+![Captura de tela 2024-06-05 165856](https://github.com/nic01gbbb/Cinemik/assets/148110086/3d3e13eb-0962-4dba-a3cd-3c2252fcf583)
 
 
 
