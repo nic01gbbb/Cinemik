@@ -1,11 +1,10 @@
 import { MdOutlineHideSource } from "react-icons/md";
 import { FaFastBackward } from "react-icons/fa";
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./style.css";
 import Appcontext from "../ferramentas/Appcontext";
 
 import api from "../ferramentas/Api";
-import Celula from "../poltronas";
 
 export default function Sessão() {
   const { sessao, setsessao, controle, setcontrole } = useContext(Appcontext);
@@ -450,7 +449,7 @@ export default function Sessão() {
       <section className="coluna1">
         <div className="btnsessao">
           <button onClick={vizualsessaoclick} className="vizusessaobtn">
-            {!vizualsessao ? "Vizualizar a sessao" : "Fechar vizual"}
+            {!vizualsessao ? "Visualizar a sessao" : "Fechar visual"}
           </button>
           <button onClick={cadastrarS} className="cadastrarsessaobtn">
             Cadastrar na sessão

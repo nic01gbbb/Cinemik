@@ -273,10 +273,17 @@ export const Index2 = () => {
       >
         <h3
           className="h3Tabela2"
-          style={{ textAlign: "center", color: "yellow" }}
-        >{`${celulas.length} Poltronas Fileira:${dadosUsuarioF} Cadeira:${
+          style={{
+            textAlign: "center",
+            color: "yellow",
+            maxWidth: "400px",
+            margin: "0px auto",
+          }}
+        >{` Olá ${dadosUsuarioNome},bem vindo a sala de verificação,
+        sua fileira é a da letra     
+        ${dadosUsuarioF} e a cadeira a de número ${
           dadosUsuarioC2 ? dadosUsuarioC + dadosUsuarioC2 : dadosUsuarioC
-        } Nome:${dadosUsuarioNome}`}</h3>
+        } `}</h3>
         <div className="ConteudoTabela2">
           {celulas.map((itens) => (
             <div style={{ display: "flex" }} className="">
