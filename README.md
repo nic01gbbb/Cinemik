@@ -38,6 +38,11 @@ no backend Uma API Rest para controle de dados,ela armazena cadastro de usuário
 
 ![Captura de tela 2024-06-03 170114](https://github.com/nic01gbbb/Cinemik/assets/148110086/35d41221-89bc-4354-9fca-e5cb95e77965)
 
+![Captura de tela 2024-06-05 160745](https://github.com/nic01gbbb/Cinemik/assets/148110086/e84171cf-c91e-4d98-96ad-78eccb58947a)
+
+
+
+
 <h2>Inicialização</h2>
 
 Este projeto foi desenvolvido em ambiente windows utilizando as tecnologias citadas anteriormente e feito no "Visual Studio Code"<a> https://code.visualstudio.com/download<a/> programa bem eficiente que atende todos os 
