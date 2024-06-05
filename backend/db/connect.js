@@ -5,7 +5,7 @@ const seçãoModels = require("../models/seçãoModels.js");
 
 const Sequelize = require("sequelize");
 
-//Coloque o nome de eu banco de dados,seu username e password//
+//Coloque o nome de seu banco de dados,username e password//
 
 const connect = new Sequelize("database", "username", "password", {
   host: "",
