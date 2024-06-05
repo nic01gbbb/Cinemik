@@ -65,13 +65,13 @@ requisitos da aplicação.A preparação consiste em instalar as tecnologias de 
 
 Depois de instalado as tecnologias necessárias,ainda no github,clique no link principal do projeto,em code faça o download de zip para clonar o projeto.
 Depois de baixar a pasta,clique com o botão direito do mouse na mesma e extraia todo o arquivo,dentro da pasta extraida em terminal digite o comando:
-"code.",para abrir o editor.
+"code .",para abrir o editor.
 Dentro do Visual Studio Code clique com o botão direito do mouse na pasta "backend",em seguida abra o terminal onde será digitado os comandos.
 O próximo passo é criar um banco de dados mysql,para isso configure os dados da conta do banco
 no arquivo config.json da pasta config,será requirido seu username,host,password,dialect e o nome do banco de sua escolha em database.
 Assim que os dados forem configurados use o comando no terminal: "npx sequelize db:create" e o banco será criado.
 Criado o banco, será necessário criar as tabelas "usuario" e "sessao",para isso use o comando: "npx sequelize db:migrate, assim será
-criado a tabela de usuários.Para criar a tabela de sessões,no arquivo "connect.js" da pasta "db", em "path.resolve" de "migrations-path,
+criado a tabela de usuários.Para criar a tabela de sessões,no arquivo "connect.js" da pasta "db", em "path.resolve" de "migrations-path",
 troque a palavra "usuario" por "sessao".Use novamente o comando:"npx sequelize db:migrate" e assim será criado a tabela de sessões.
 
 </p>
