@@ -1,10 +1,10 @@
 {
   "development": {
-    "username": "root",
-    "password": "voudev01",
-    "database": "cinemadb",
-    "host": "localhost",
-    "dialect": "mysql"  },
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
+    "dialect": ""  },
   "test": {
     "username": "root",
     "password": null,
