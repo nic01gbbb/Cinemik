@@ -11,6 +11,7 @@ class Usuario extends Model {
         cidade: DataTypes.CHAR(150),
         endereço: DataTypes.CHAR(150),
         numero: DataTypes.CHAR(50),
+        alguma_deficiência: DataTypes.BOOLEAN,
       },
       { sequelize, modelName: "usuario", tableName: "usuario" }
     );

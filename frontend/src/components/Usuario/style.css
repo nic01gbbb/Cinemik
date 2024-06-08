@@ -150,3 +150,40 @@
     align-items: center;
   }
 }
+label {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+}
+
+label button {
+  padding: 5px;
+  background-color: #111;
+  border-radius: 5px;
+  color: white;
+}
+.Dptrue {
+  padding: 5px;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  left: 80px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Dpfalse {
+  padding: 3px;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  left: 120px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

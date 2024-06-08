@@ -12,6 +12,7 @@ function Usuario() {
   const [cpf, setcpf] = useState("");
   const [endereço, setendereço] = useState("");
   const [numero, setnumero] = useState("");
+  const [deficiente, setdeficiente] = useState(false);
   const [cidade, setcidade] = useState("");
   const [confirm, setconfirm] = useState("");
 
@@ -39,6 +40,19 @@ function Usuario() {
   const [confirmDELETE, setconfirmDELETE] = useState("");
 
   const [ligaform, setligaform] = useState(false);
+
+  const Dptrue = (e) => {
+    e.preventDefault();
+    setdeficiente(!deficiente);
+  };
+  const Dpfalse = (e) => {
+    e.preventDefault();
+    setdeficiente(!deficiente);
+  };
+
+  useEffect(() => {
+    console.log(deficiente);
+  }, [deficiente]);
 
   const Vsfun = async (e) => {
     e.preventDefault();
@@ -113,6 +127,7 @@ function Usuario() {
     setmsgNomeDELETE("");
     setmsgSenhaDELETE("");
     setmsgConfirmDELETE("");
+    setdeficiente("");
   };
 
   const fecharconcluido = () => {
@@ -238,6 +253,7 @@ function Usuario() {
         confirm: confirm,
         senha: senha,
         cidade: cidade,
+        alguma_deficiência: deficiente,
       });
 
       if (create.data.msg === "Usuario cadastrado com sucesso!") {
@@ -265,15 +281,6 @@ function Usuario() {
   const ativaEstadoDelete = () => {
     setestadodelete(!estadoDelete);
   };
-
-  useEffect(() => {
-    setnumero("");
-    setsenha("");
-    setconfirm("");
-    setnomeDELETE("");
-    setsenhaDELETE("");
-    setconfirmDELETE("");
-  }, [usuarios]);
 
   return (
     <div
@@ -387,6 +394,27 @@ function Usuario() {
             >
               <p>{msgnumero}</p>
             </div>
+            <label>
+              Deficiênte:
+              <button
+                style={{
+                  backgroundColor: deficiente ? "blue" : "black",
+                }}
+                className="Dptrue"
+                onClick={Dptrue}
+              >
+                Sim
+              </button>
+              <button
+                style={{
+                  backgroundColor: !deficiente ? "blue" : "black",
+                }}
+                className="Dpfalse"
+                onClick={Dpfalse}
+              >
+                Não
+              </button>
+            </label>
 
             <input
               value={senha}

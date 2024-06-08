@@ -86,6 +86,7 @@ module.exports = {
     if (findsection) {
       return res.json({ msg: "Sessão inválida", findsection });
     }
+
     return res.json(1);
   },
   BuscaConcluida: async (req, res) => {

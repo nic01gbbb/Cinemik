@@ -39,7 +39,11 @@ module.exports = {
         type: Sequelize.CHAR(50),
         allowNull: false,
       },
-
+      alguma_deficiência: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        allowNull: false,
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,

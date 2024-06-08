@@ -207,7 +207,6 @@ export const Index2 = () => {
           ctz = i - 16 * 13;
           modelctz = `N${ctz}`;
         }
-        console.log({ i, celulas });
 
         setcelulas([
           ...celulas,
@@ -223,7 +222,6 @@ export const Index2 = () => {
     setdadosUsuarioC(box.map((itens) => itens.findOnsection.posição[1]));
     setdadosUsuarioC2(box.map((itens) => itens.findOnsection.posição[2]));
     setdadosUsuarioNome(box.map((itens) => itens.dadosUsuario));
-    console.log(dadosUsuarioNome);
   };
 
   useEffect(() => {

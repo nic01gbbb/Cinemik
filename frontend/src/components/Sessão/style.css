@@ -54,11 +54,15 @@
   height: 100px;
 }
 
-.divspan {
+.divspan p {
+  padding: 8px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  width: 30px;
+  cursor: pointer;
 }
+
 .backsessao {
   position: absolute;
   left: 15px;
@@ -116,6 +120,9 @@
   @media (max-width: 593px) {
     max-width: 350px;
   }
+  @media (max-width: 410px) {
+    max-width: 260px;
+  }
 }
 .btnsessao button {
   border: 3px solid white;
@@ -128,6 +135,7 @@
   @media (max-width: 480px) {
     width: 80px;
     height: 80px;
+    font-size: 10px;
   }
 }
 .vizualsessao {
@@ -136,66 +144,64 @@
   display: flex;
   align-items: center;
 }
-.p {
-  background-color: red;
-  margin-top: 10px;
-  width: 20px;
-  height: 10px;
-  padding: 20px;
+
+.Ps span {
+  cursor: pointer;
+  max-width: 80px;
+  height: 80px;
+  padding: 5px;
+}
+.Ps p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 13px;
-  cursor: pointer;
-  @media (max-width: 830px) {
+  @media (max-width: 950px) {
+    max-width: 35px;
   }
-}
-.Ps span {
-  cursor: pointer;
+  @media (max-width: 800px) {
+    max-width: 25px;
+    height: 27px;
+    font-size: 11px;
+  }
 
-  @media (max-width: 860px) {
-    padding: 12px 15px;
-    font-size: 10px;
-    width: 5px;
-  }
-  @media (max-width: 659px) {
-    padding: 10px 12px;
+  @media (max-width: 600px) {
+    max-width: 15px;
+    height: 20px;
     font-size: 8px;
-    width: 3px;
   }
-  @media (max-width: 511px) {
-    padding: 8px 8px;
-    font-size: 6px;
-    width: 3px;
+  @media (max-width: 403px) {
+    max-width: 1px;
+    height: 15px;
+    font-size: 9px;
+    border: 2px solid black;
   }
 }
 
 .paiP {
   display: grid;
-  grid-template-columns: repeat(17, 45px);
-  margin: 0 auto;
+  grid-template-columns: repeat(16, 30px);
+  margin: 20px auto;
   align-items: center;
   justify-content: center;
-  max-width: 50px;
-  gap: 4px;
-
-  margin-top: -20px;
-  @media (max-width: 860px) {
-    gap: 7px;
-    grid-template-columns: repeat(17, 30px);
-    margin-top: 1px;
+  max-width: 30px;
+  gap: 30px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  @media (max-width: 914px) {
+    grid-template-columns: repeat(16, 20px);
   }
-  @media (max-width: 659px) {
-    grid-template-columns: repeat(17, 20px);
-    gap: 8px;
+  @media (max-width: 800px) {
+    font-size: 12px;
+    grid-template-columns: repeat(16, 10px);
+    gap: 27px;
   }
-  @media (max-width: 511px) {
-    grid-template-columns: repeat(17, 5px);
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(16, 8px);
     gap: 15px;
   }
-  @media (max-width: 370px) {
-    grid-template-columns: repeat(17, 3px);
-    gap: 15px;
+  @media (max-width: 403px) {
+    grid-template-columns: repeat(16, 10px);
+    gap: 12px;
   }
 }
 .Ps {
@@ -204,9 +210,6 @@
   }
   @media (max-width: 659px) {
     margin-top: -7px;
-  }
-  @media (max-width: 511px) {
-    margin-top: -14px;
   }
 }
 
@@ -280,4 +283,12 @@
     background-color: #222;
     color: white;
   }
+}
+.informações {
+  @media (max-width: 650px) {
+    font-size: 12px;
+  }
+}
+.sessão input {
+  color: white;
 }

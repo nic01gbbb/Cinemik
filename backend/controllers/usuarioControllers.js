@@ -5,8 +5,17 @@ const sessaoModels = require("../models/seçãoModels.js");
 
 module.exports = {
   createUser: async (req, res) => {
-    const { nome, email, senha, confirm, cpf, endereço, cidade, numero } =
-      req.body;
+    const {
+      nome,
+      email,
+      senha,
+      confirm,
+      cpf,
+      endereço,
+      cidade,
+      numero,
+      alguma_deficiência,
+    } = req.body;
     if (!nome && !email && !senha && !endereço && !cidade && !numero) {
       return res.status(422).json({ msg: "O campo está vazio " });
     } else if (!nome) {
@@ -48,6 +57,7 @@ module.exports = {
     } else if (!numero) {
       return res.status(422).json({ msg: "O número é obrigatório" });
     }
+
     const findfornome = await UsuarioModels.findOne({
       where: {
         nome: nome,
@@ -83,6 +93,7 @@ module.exports = {
         cidade: cidade,
         endereço: endereço,
         numero: numero,
+        alguma_deficiência: alguma_deficiência,
       },
     });
     if (!creating) {
@@ -171,8 +182,11 @@ module.exports = {
     const senhacorreta = await bcrypt.compare(senha, coduser);
     if (!senhacorreta) {
       return res.json("senha incorreta");
-    } else if (senhacorreta) {
-      return res.json("free");
+    }
+    const seDeficiente = findUser.alguma_deficiência;
+
+    if (senhacorreta) {
+      return res.json({ msg: "free", seDeficiente });
     }
   },
 };

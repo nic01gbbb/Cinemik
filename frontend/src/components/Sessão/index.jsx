@@ -33,18 +33,14 @@ export default function Sessão() {
 
   const [start, setstart] = useState(false);
 
-  const teste = ["1", "57", "68", "105", "7878"];
-  const [boxA, setboxA] = useState([]);
-
-  const [concluidas, setconcluidas] = useState(false);
   const [oculardados, setocultardados] = useState(true);
+
+  const [deficiente, setdeficiente] = useState("");
 
   const [celulas, setcelulas] = useState([
     {
-      item: 0,
-      modelctz: "A",
-      paragrafo: "",
-      concluido: false,
+      nome: "",
+      concluida: "",
     },
   ]);
 
@@ -66,247 +62,64 @@ export default function Sessão() {
       setcarregaColorS(true);
     }
   };
+  const [estadoF, setestadoF] = useState("");
+  const { estadoC, setestadoC } = useContext(Appcontext);
 
-  const load = async () => {
-    let ctz = "";
-    let modelctz = "";
-    const econcuidas = await api.get("/Bc");
-    if (econcuidas.data) {
-      console.log(econcuidas.data);
-      const teste = ["A3", "A0", "B5"];
+  const load = async (nome, fileira, Cadeira) => {
+    const dadosconcluidas = await api.get("/Bc");
 
-      for (let i = 0; i < 224; i++) {
-        ctz = i;
+    let capacidade = fileira * Cadeira;
 
-        if (i >= 0) {
-          ctz = i;
-          modelctz = `A${ctz}`;
-        }
+    if (fileira > 24) {
+      return alert("maximo 24 fileiras");
+    }
 
-        if (i >= 16) {
-          ctz = i - 16;
-          modelctz = `B${ctz}`;
-        }
-        if (i >= 32) {
-          ctz = i - 32;
-          modelctz = `C${ctz}`;
-        }
+    let cadeirante = (2 / 100) * capacidade;
 
-        if (i >= 48) {
-          ctz = i - 48;
-          modelctz = `D${ctz}`;
-        }
-        if (i >= 64) {
-          ctz = i - 64;
-          modelctz = `E${ctz}`;
-        }
-        if (i >= 80) {
-          ctz = i - 80;
-          modelctz = `F${ctz}`;
-        }
-        if (i >= 96) {
-          ctz = i - 96;
-          modelctz = `G${ctz}`;
-        }
-        if (i >= 112) {
-          ctz = i - 112;
-          modelctz = `H${ctz}`;
-        }
-        if (i >= 128) {
-          ctz = i - 128;
-          modelctz = `I${ctz}`;
-        }
-        if (i >= 144) {
-          ctz = i - 144;
-          modelctz = `J${ctz}`;
-        }
-        if (i >= 160) {
-          ctz = i - 160;
-          modelctz = `K${ctz}`;
-        }
-        if (i >= 176) {
-          ctz = i - 176;
-          modelctz = `L${ctz}`;
-        }
-        if (i >= 192) {
-          ctz = i - 192;
-          modelctz = `M${ctz}`;
+    console.log(cadeirante);
+    let modelacessibilidade = [];
+    const adiantador = 2;
+
+    for (let w = 0; w < cadeirante; w++) {
+      for (let b = 1; b < cadeirante; b = b + 1) {
+        modelacessibilidade.push(
+          String.fromCharCode(97 + b).toUpperCase() + Math.round(b + 4)
+        );
+        console.log(modelacessibilidade);
+      }
+    }
+    let cadeiras = [];
+
+    for (let j = 1; j < fileira; j++) {
+      for (let i = 0; i < Cadeira; i++) {
+        let cadeira = String.fromCharCode(96 + j).toUpperCase() + (i + 1);
+
+        if (i < 1) {
+          cadeiras.push({
+            nome: cadeira[0],
+            concluida: "",
+            acessibilidade: "",
+          });
         }
 
-        if (celulas.length < 221 && i < 221) {
-          if (i == 16) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "B",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 2) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "C",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 3) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "D",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 4) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "E",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 5) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "F",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 6) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "G",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 7) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "H",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 8) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "I",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 9) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "J",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 10) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "K",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 11) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "L",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-          if (i == 16 * 12) {
-            setcelulas([
-              ...celulas,
-              celulas.push({
-                item: "",
-                modelctz: "M",
-                concluido: false,
-                paragrafo: "",
-              }),
-            ]);
-          }
-
-          setcelulas([
-            ...celulas,
-            celulas.push({
-              item: i,
-              modelctz: modelctz,
-              paragrafo: ctz,
-              concluido: econcuidas.data.includes(modelctz) ? true : false,
-            }),
-          ]);
-        } else {
-          celulas.map((con) =>
-            econcuidas.data.includes(con.modelctz)
-              ? (con.concluido = true)
-              : false
-          );
-
-          if (
-            msgsegundaR &&
-            msgsegundaR === "Cadastro concluido com sucesso!"
-          ) {
-            setconcluidas(true);
-            console.log("ok");
-            celulas.map((itens) =>
-              caixaCa && itens.modelctz == caixaCa
-                ? (itens.concluido = true)
-                : ""
-            );
-          }
-        }
+        cadeiras.push({
+          nome: cadeira,
+          concluida: dadosconcluidas.data.includes(cadeira) ? true : false,
+          acessibilidade: modelacessibilidade.includes(cadeira)
+            ? "especial"
+            : "normal",
+        });
       }
     }
 
-    setcelulas([...celulas]);
-    setboxA([...celulas.filter((itens) => (itens.item < 16 ? itens : null))]);
-    console.log(boxA);
+    setcelulas(cadeiras);
+    setestadoC(Cadeira);
+    setestadoF(fileira);
   };
 
   useEffect(() => {
-    load();
-  }, [sessao, concluidas]);
+    load("sala1", 15, 15);
+  }, [sessao]);
 
   const concluircadastro = (e) => {
     e.preventDefault();
@@ -321,16 +134,33 @@ export default function Sessão() {
     load();
   };
 
-  const escolherpoltrona = async (id, index) => {
+  const escolherpoltrona = async (id, x) => {
+    if (!ligmsg) {
+      setmsgsegundaR(
+        "Clique no botão de cadastrar na sessão e preencha o formulário primeiramente"
+      );
+
+      return;
+    }
+    if (!start) {
+      setmsgsegundaR("Conclua a fase de cadastro primeiramente");
+
+      return;
+    }
+
     const listsessaoo = await api.get(`/Listsessaoid/${id}`);
-    if (
-      nome &&
-      senha &&
-      confirm &&
-      listsessaoo.data.msg === "Sessão inválida"
-    ) {
+    const acessivel = x;
+    console.log(acessivel);
+    if (listsessaoo.data.msg === "Sessão inválida") {
       setsegundaR(true);
-      setmsgsegundaR("Sessão inválida");
+      setmsgsegundaR("acento ocupado");
+      setTimeout(() => {
+        setmsgsegundaR("");
+        setsegundaR(false);
+      }, 2000);
+    } else if (x === "especial" && !deficiente) {
+      setsegundaR(true);
+      setmsgsegundaR("acento de pessoas especiais");
       setTimeout(() => {
         setmsgsegundaR("");
         setsegundaR(false);
@@ -378,12 +208,13 @@ export default function Sessão() {
     } else if (login.data === "Ujá") {
       setnomemsg("Este usuario já esta cadastrado em uma das poltronas");
       setstart(false);
-    } else if (login.data === "free") {
+    } else if (login.data.msg === "free") {
       setnomemsg("");
       setsenhamsg("");
       setconfirmmsg("");
       setstart(true);
       setcaixaCa("");
+      setdeficiente(login.data.seDeficiente);
     }
   };
 
@@ -426,6 +257,12 @@ export default function Sessão() {
     setcarregaColor("");
     setcarregaColorS(false);
     setocultardados(true);
+    setsenhamsg("");
+    setnomemsg("");
+    setconfirmmsg("");
+    setstart(false);
+    setligmsg(false);
+    setvizualsessao(false);
   };
 
   const vizualsessaoclick = () => {
@@ -439,7 +276,14 @@ export default function Sessão() {
   }, [sessao]);
 
   return (
-    <div className="sessão" style={{ display: sessao ? "flex" : "none" }}>
+    <div
+      className="sessão"
+      style={{
+        display: sessao ? "flex" : "none",
+        justifyContent: "center",
+        margin: "0px auto",
+      }}
+    >
       <h1 style={{ marginBottom: "-260px" }} className="h1sessao">
         Bem vindo a sua sessão
       </h1>
@@ -605,191 +449,108 @@ export default function Sessão() {
           <p>{msgP}</p>
         </div>
 
+        <div style={{ display: "flex", gap: "2rem" }} className="Ps">
+          <div
+            style={{ display: "flex", gap: "1rem", marginBottom: "5px" }}
+          ></div>
+        </div>
         <div
           style={{
-            display: vizualsessao ? "flex" : "none",
+            margin: "10px auto",
+            justifyContent: "center",
+            alignItems: "center",
+            display: vizualsessao ? "flex" : "nnoe",
             flexDirection: "column",
           }}
-          className="vizualsessao"
         >
-          <div style={{ display: "flex", gap: "2rem" }} className="Ps">
-            <div style={{ display: "flex", gap: "1rem", marginBottom: "5px" }}>
-              <button
-                style={{
-                  padding: "5px",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "20px",
-                  height: "20px",
-                  backgroundColor: "black",
-                  color: "white",
-                  fontSize: "55px",
-                  cursor: "pointer",
-                }}
-                onClick={ocultardados}
-              >
-                <MdOutlineHideSource />
-              </button>
-              <p
-                style={{
-                  marginBottom: "20px",
-                  opacity: !oculardados ? "0" : "1",
-                }}
-              >{`${celulas.length} Poltronas`}</p>
-              <p
-                style={{
-                  display: caixaCa ? "flex" : "none",
-                  marginBottom: "20px",
-                  opacity: !carregaColorS ? "0" : "1",
-                }}
-              >
-                {caixaCa.length === 2
-                  ? `Fileira: ${caixaCa[0]} Cadeira: ${caixaCa[1]}`
-                  : `Fileira: ${caixaCa[0]} Cadeira: ${caixaCa[1]}${caixaCa[2]}`}
-              </p>
-            </div>
+          <div
+            style={{
+              gap: "1rem",
+              display: "flex",
+              margin: "50px auto -20px",
+              justifyContent: "center",
+            }}
+            className="informações"
+          >
+            <button
+              style={{
+                padding: "5px",
+                borderRadius: "50%",
+                display: vizualsessao ? "flex" : "none",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "20px",
+                height: "20px",
+                backgroundColor: "black",
+                color: "white",
+                fontSize: "55px",
+                cursor: "pointer",
+              }}
+              onClick={ocultardados}
+            >
+              <MdOutlineHideSource />
+            </button>
+
+            <p
+              style={{
+                marginBottom: "20px",
+                opacity: !oculardados ? "0" : "1" && vizualsessao ? "1" : "0",
+              }}
+            >{`${celulas.length} Poltronas`}</p>
+            <p
+              style={{
+                display: caixaCa && vizualsessao ? "flex" : "none",
+                marginBottom: "20px",
+                opacity: !carregaColorS ? "0" : "1",
+              }}
+            >
+              {caixaCa.length === 2
+                ? `Fileira: ${caixaCa[0]} Cadeira: ${caixaCa[1]}`
+                : `Fileira: ${caixaCa[0]} Cadeira: ${caixaCa[1]}${caixaCa[2]}`}
+            </p>
           </div>
 
-          <div className="paiP" style={{ paddingBottom: "50px" }}>
-            {celulas.map((itens, index) => (
-              <div
-                key={index}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(16,50px)",
-                }}
-                className="Ps"
-              >
+          <div
+            style={{
+              display: vizualsessao ? "grid" : "none",
+            }}
+            className="paiP"
+          >
+            {celulas.map((itens) => (
+              <div className="Ps">
                 <span
                   style={{
-                    marginTop: "2px",
-                    backgroundColor:
-                      itens.concluido && carregaColor !== itens.modelctz
-                        ? "red"
-                        : carregaColor == itens.modelctz
-                        ? "yellow"
-                        : "blue" && itens.modelctz.length == 1
-                        ? "black"
-                        : "blue",
+                    width: "400px",
+                    position: "relative",
                   }}
-                  onClick={() => escolherpoltrona(itens.modelctz)}
-                  className="p"
+                  className=""
                 >
                   <p
+                    onClick={() =>
+                      escolherpoltrona(itens.nome, itens.acessibilidade)
+                    }
                     style={{
-                      display: itens.modelctz[0] === "A" ? "flex" : "none",
+                      backgroundColor:
+                        carregaColor == itens.nome
+                          ? "yellow"
+                          : "blue" && itens.nome.length == 1
+                          ? "black"
+                          : "blue" && itens.acessibilidade !== "normal"
+                          ? "black"
+                          : "blue" && itens.concluida
+                          ? "red"
+                          : "blue",
+                      position: "absolute",
+                      padding: "10px",
+                      width: "50px",
                     }}
                   >
-                    A
-                  </p>
-
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "B" ? "flex" : "none",
-                    }}
-                  >
-                    B
-                  </p>
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "C" ? "flex" : "none",
-                    }}
-                  >
-                    C
-                  </p>
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "D" ? "flex" : "none",
-                    }}
-                  >
-                    D
-                  </p>
-
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "E" ? "flex" : "none",
-                    }}
-                  >
-                    E
-                  </p>
-
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "F" ? "flex" : "none",
-                    }}
-                  >
-                    F
-                  </p>
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "G" ? "flex" : "none",
-                    }}
-                  >
-                    G
-                  </p>
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "H" ? "flex" : "none",
-                    }}
-                  >
-                    H
-                  </p>
-
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "I" ? "flex" : "none",
-                    }}
-                  >
-                    I
-                  </p>
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "J" ? "flex" : "none",
-                    }}
-                  >
-                    J
-                  </p>
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "K" ? "flex" : "none",
-                    }}
-                  >
-                    k
-                  </p>
-
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "L" ? "flex" : "none",
-                    }}
-                  >
-                    L
-                  </p>
-
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "M" ? "flex" : "none",
-                    }}
-                  >
-                    M
-                  </p>
-                  <p
-                    style={{
-                      display: itens.modelctz[0] === "N" ? "flex" : "none",
-                    }}
-                  >
-                    N
-                  </p>
-
-                  <p
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {itens.paragrafo}
+                    {itens.acessibilidade &&
+                    itens.acessibilidade !== "normal" ? (
+                      <p>♿</p>
+                    ) : (
+                      itens.nome
+                    )}
                   </p>
                 </span>
               </div>
