@@ -5,7 +5,7 @@
 Esta aplicação é um projeto full-stack de controle de usuário de um cinema.
 No backend Uma API Rest para controle de dados,ela armazena cadastro de usuários e acentos da sessão.
 A medida que cadastramos um usuário e depois o mesmo em um acento livre,a API faz o armazenamento no 
-banco de dados,assim temos todo controle de acentos livres e ocupados.
+banco de dados,assim temos todo controle de acentos livres,ocupados de para pessoas especiais.
 
 <h2>Funcionalidades do projeto</h2>
 
@@ -13,6 +13,7 @@ banco de dados,assim temos todo controle de acentos livres e ocupados.
 - Armazenar os dados dos usuários
 - O usuário pode escolher seu acento de preferência, da cadeira "A" até a cadeira "M", e da fileira "0" até a "15"
 - O usuário não pode escolher um acento que já esteja ocupado
+- O usuário não pode escolher um acento que seja próprio para pessoas especiais, caso ele não tenha nenhuma deficiência.
 - O usuário pode visualizar seu acento na tabela
 
 
