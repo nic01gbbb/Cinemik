@@ -1,3 +1,4 @@
+import { MdVerifiedUser } from "react-icons/md";
 import { MdOutlineHideSource } from "react-icons/md";
 import { FaFastBackward } from "react-icons/fa";
 import { useContext, useEffect, useState } from "react";
@@ -10,11 +11,7 @@ export default function Sessão() {
   const { sessao, setsessao, controle, setcontrole } = useContext(Appcontext);
   const { vizualsessao, setvizualsessao } = useContext(Appcontext);
 
-  const { caixaF, setcaixaF } = useContext(Appcontext);
-  const { caixaCo, setcaixaCo } = useContext(Appcontext);
   const { caixaCa, setcaixaCa } = useContext(Appcontext);
-
-  const { caixaS, setcaixaS } = useContext(Appcontext);
 
   const [nome, setnome] = useState("");
   const [senha, setsenha] = useState("");
@@ -36,7 +33,6 @@ export default function Sessão() {
   const [oculardados, setocultardados] = useState(true);
 
   const [deficiente, setdeficiente] = useState("");
-
   const [celulas, setcelulas] = useState([
     {
       nome: "",
@@ -46,13 +42,6 @@ export default function Sessão() {
 
   const [carregaColor, setcarregaColor] = useState("");
   const [carregaColorS, setcarregaColorS] = useState(true);
-
-  useEffect(() => {
-    if (carregaColor !== "") {
-      setocultardados(true);
-      setcarregaColorS(true);
-    }
-  }, [carregaColor]);
 
   const ocultardados = () => {
     setocultardados(!oculardados);
@@ -74,7 +63,7 @@ export default function Sessão() {
       return alert("maximo 24 fileiras");
     }
 
-    let cadeirante = (2 / 100) * capacidade;
+    let cadeirante = (3 / 100) * capacidade;
 
     console.log(cadeirante);
     let modelacessibilidade = [];
@@ -85,7 +74,6 @@ export default function Sessão() {
         modelacessibilidade.push(
           String.fromCharCode(97 + b).toUpperCase() + Math.round(b + 4)
         );
-        console.log(modelacessibilidade);
       }
     }
     let cadeiras = [];
@@ -119,19 +107,23 @@ export default function Sessão() {
 
   useEffect(() => {
     load("sala1", 15, 15);
-  }, [sessao]);
+  }, [sessao, carregaColor]);
 
   const concluircadastro = (e) => {
     e.preventDefault();
-    setcaixaCa("");
-    setconfirm("");
-    setmsgsegundaR("");
-    setnome("");
-    setsenha("");
-    setconcluidas(false);
-    setstart(false);
-    setcarregaColor("");
-    load();
+    if (msgsegundaR === "Cadastro concluido com sucesso!") {
+      setcaixaCa("");
+      setconfirm("");
+      setmsgsegundaR("");
+      setnome("");
+      setsenha("");
+      setstart(false);
+      setcarregaColor("");
+      load();
+    } else if (msgsegundaR !== "Cadastro concluido com sucesso!")
+      setmsgsegundaR("");
+    {
+    }
   };
 
   const escolherpoltrona = async (id, x) => {
@@ -150,21 +142,18 @@ export default function Sessão() {
 
     const listsessaoo = await api.get(`/Listsessaoid/${id}`);
     const acessivel = x;
-    console.log(acessivel);
+
     if (listsessaoo.data.msg === "Sessão inválida") {
       setsegundaR(true);
       setmsgsegundaR("acento ocupado");
-      setTimeout(() => {
-        setmsgsegundaR("");
-        setsegundaR(false);
-      }, 2000);
     } else if (x === "especial" && !deficiente) {
       setsegundaR(true);
-      setmsgsegundaR("acento de pessoas especiais");
-      setTimeout(() => {
-        setmsgsegundaR("");
-        setsegundaR(false);
-      }, 2000);
+      setmsgsegundaR("Este acento é somente para pessoas especiais");
+    } else if (x !== "especial" && deficiente) {
+      setsegundaR(true);
+      setmsgsegundaR(
+        "Por gentileza,escolhe um acento que seja somente para pessoas com algum tipo de deficiência"
+      );
     } else if (listsessaoo.data == 1) {
       setcarregaColor(id);
       setcaixaCa(id);
@@ -177,29 +166,48 @@ export default function Sessão() {
       setnomemsg("O nome é obrigatório");
     }
     if (!senha) {
-      setsenhamsg("A senha é obrigatório");
-    }
-    if (senha && !confirm) {
-      setconfirmmsg("Digite a senha novamente");
-    }
-    if (confirm && confirm !== senha) {
-      setconfirmmsg("As senhas devem ser iguais");
-    }
-
-    if (nome) {
-      setnomemsg("");
-    }
-    if (senha) {
+      if (confirm || confirmmsg) {
+        setconfirm("");
+        setconfirmmsg("");
+      }
+      return setsenhamsg("A senha é obrigatório");
+    } else {
       setsenhamsg("");
     }
-    if (confirm && confirm === senha) {
+    if (senha && !confirm) {
+      return setconfirmmsg("Digite a senha novamente");
+    } else {
+      setconfirmmsg("");
+    }
+    if (confirm && confirm !== senha) {
+      return setconfirmmsg("As senhas devem ser iguais");
+    } else {
       setconfirmmsg("");
     }
 
     const login = await api.get(`/LoginUser/${nome}/${senha}/${confirm}`);
-
     console.log(login.data);
-    if (login.data === "ui") {
+
+    const todasosacentosespecias = celulas.filter(
+      (itens) => itens.acessibilidade === "especial"
+    );
+    const todososusuariosespecias = login.data.Allspecial.length;
+
+    const todososacentosespeciasQuantidade = todasosacentosespecias.length;
+    console.log({ todososacentosespeciasQuantidade, todososusuariosespecias });
+
+    if (todososacentosespeciasQuantidade < todososusuariosespecias) {
+      setmsgsegundaR(true);
+      setmsgsegundaR(
+        "Lamentamos,o limite de poltronas para pessoas especias desta sessão foi esgotado"
+      );
+      return;
+    }
+
+    if (login.data === "nome e senha são obrigatórios") {
+      setnomemsg("O nome é obrigatório");
+      setsenhamsg("A senha é obrigatório");
+    } else if (login.data === "ui") {
       setnomemsg("usuario inválido,verifique o nome");
       setstart(false);
     } else if (login.data === "senha incorreta") {
@@ -252,6 +260,9 @@ export default function Sessão() {
   };
 
   const backsessao = () => {
+    setnome("");
+    setsenha("");
+    setconfirm("");
     setsessao(false);
     setcontrole(true);
     setcarregaColor("");
@@ -269,12 +280,6 @@ export default function Sessão() {
     setvizualsessao(!vizualsessao);
   };
 
-  useEffect(() => {
-    setnome("");
-    setsenha("");
-    setconfirm("");
-  }, [sessao]);
-
   return (
     <div
       className="sessão"
@@ -282,6 +287,8 @@ export default function Sessão() {
         display: sessao ? "flex" : "none",
         justifyContent: "center",
         margin: "0px auto",
+        flexDirection: "column",
+        width: "100vw",
       }}
     >
       <h1 style={{ marginBottom: "-260px" }} className="h1sessao">
@@ -290,7 +297,15 @@ export default function Sessão() {
       <button onClick={backsessao} className="backsessao">
         <FaFastBackward />
       </button>
-      <section className="coluna1">
+      <section
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        className="coluna1"
+      >
         <div className="btnsessao">
           <button onClick={vizualsessaoclick} className="vizusessaobtn">
             {!vizualsessao ? "Visualizar a sessao" : "Fechar visual"}
@@ -300,7 +315,10 @@ export default function Sessão() {
           </button>
         </div>
         <form
-          style={{ display: ligmsg && msgsegundaR === "" ? "flex" : "none" }}
+          style={{
+            display: ligmsg && msgsegundaR === "" ? "flex" : "none",
+            margin: "10px auto",
+          }}
           className="formsessao"
         >
           <input
@@ -321,17 +339,28 @@ export default function Sessão() {
           <div style={{ display: senhamsg ? "flex" : "none" }} className="erro">
             <p>{senhamsg}</p>
           </div>
-          <input
-            type="password"
-            placeholder="Digite sua senha novamente"
-            value={confirm}
-            onChange={(e) => setconfirm(e.target.value)}
-          />
+
           <div
-            style={{ display: confirmmsg ? "flex" : "none" }}
-            className="erro"
+            style={{
+              display: confirmmsg ? "flex" : "none",
+              flexDirection: "column",
+            }}
+            className=""
           >
-            <p>{confirmmsg}</p>
+            <input
+              type="password"
+              placeholder="Confirmação de senha"
+              value={confirm}
+              onChange={(e) => setconfirm(e.target.value)}
+            />
+            <div
+              style={{
+                display: confirmmsg !== "" ? "flex" : "none",
+              }}
+              className="erro"
+            >
+              <p>{confirmmsg}</p>
+            </div>
           </div>
 
           <button
@@ -426,9 +455,11 @@ export default function Sessão() {
               top: "10px",
               left: "10px",
               display: msgsegundaR !== "" ? "flex" : "none",
+              background: "0",
+              color: "white",
             }}
           >
-            ok
+            <MdVerifiedUser />
           </button>
           <p
             style={{
@@ -459,7 +490,7 @@ export default function Sessão() {
             margin: "10px auto",
             justifyContent: "center",
             alignItems: "center",
-            display: vizualsessao ? "flex" : "nnoe",
+            display: vizualsessao ? "flex" : "none",
             flexDirection: "column",
           }}
         >
@@ -535,7 +566,9 @@ export default function Sessão() {
                           ? "yellow"
                           : "blue" && itens.nome.length == 1
                           ? "black"
-                          : "blue" && itens.acessibilidade !== "normal"
+                          : "blue" &&
+                            itens.acessibilidade !== "normal" &&
+                            !itens.concluida
                           ? "black"
                           : "blue" && itens.concluida
                           ? "red"

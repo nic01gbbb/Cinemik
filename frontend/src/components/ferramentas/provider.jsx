@@ -16,11 +16,14 @@ function Provider({ children }) {
   const [VsparaTabela, setVsparaTabela] = useState(false);
   const [estadoDelete, setestadodelete] = useState(false);
   const [dadosusuarioNome, setdadosusuarioNome] = useState("");
-  const [estadoC, setestadoC] = useState("");
+  const [dadosUsuarioPosição, setdadosUsuarioPosição] = useState("");
+  const [dadosUsuarioPosiçãoCF, setdadosUsuarioPosiçãoCF] = useState("");
 
   const dados = {
-    estadoC,
-    setestadoC,
+    dadosUsuarioPosiçãoCF,
+    setdadosUsuarioPosiçãoCF,
+    dadosUsuarioPosição,
+    setdadosUsuarioPosição,
     dadosusuarioNome,
     setdadosusuarioNome,
     estadoDelete,

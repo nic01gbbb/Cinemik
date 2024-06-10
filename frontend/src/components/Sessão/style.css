@@ -1,5 +1,5 @@
 .sessão {
-  width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
   background-color: black;
   display: flex;
@@ -155,25 +155,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 950px) {
+  @media (max-width: 1010px) {
     max-width: 35px;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 804px) {
     max-width: 25px;
     height: 27px;
     font-size: 11px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 630px) {
     max-width: 15px;
     height: 20px;
     font-size: 8px;
   }
-  @media (max-width: 403px) {
-    max-width: 1px;
-    height: 15px;
-    font-size: 9px;
+  @media (max-width: 410px) {
+    min-width: 20px;
+    min-height: 20px;
+    font-size: 8px;
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+  }
+}
+.Ps span {
+  @media (max-width: 410px) {
+    margin-bottom: 10px;
   }
 }
 
@@ -187,21 +194,27 @@
   gap: 30px;
   padding-bottom: 20px;
   margin-top: 20px;
-  @media (max-width: 914px) {
+  @media (max-width: 1010px) {
     grid-template-columns: repeat(16, 20px);
   }
-  @media (max-width: 800px) {
+  @media (max-width: 840px) {
     font-size: 12px;
     grid-template-columns: repeat(16, 10px);
     gap: 27px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 630px) {
     grid-template-columns: repeat(16, 8px);
     gap: 15px;
   }
-  @media (max-width: 403px) {
+  @media (max-width: 430px) {
     grid-template-columns: repeat(16, 10px);
     gap: 12px;
+  }
+
+  @media (max-width: 410px) {
+    grid-template-columns: repeat(16, 10px);
+    gap: 12px;
+    margin-left: 25px;
   }
 }
 .Ps {

@@ -150,21 +150,24 @@ module.exports = {
 
   LoginUser: async (req, res) => {
     const { nome, senha, confirm } = req.params;
-    if (!nome) {
-      return res.json("O nome é obrigatório");
-    } else if (!senha) {
-      return res.json("A senha é obrigatório");
-    } else if (senha && !confirm) {
-      return res.json("Digite a senha novamente");
-    } else if (confirm && confirm !== senha) {
-      return res.json("As senhas devem ser iguais");
-    }
+
+    const Allspecial = await UsuarioModels.findAll({
+      where: {
+        alguma_deficiência: true,
+      },
+    });
 
     const findUser = await UsuarioModels.findOne({
       where: {
         nome: nome,
       },
     });
+    console.log(findUser);
+
+    if (!findUser && !nome) {
+      return res.json("O nome é obrigatório");
+    }
+
     if (!findUser) {
       return res.json("ui");
     }
@@ -186,7 +189,7 @@ module.exports = {
     const seDeficiente = findUser.alguma_deficiência;
 
     if (senhacorreta) {
-      return res.json({ msg: "free", seDeficiente });
+      return res.json({ msg: "free", seDeficiente, Allspecial });
     }
   },
 };

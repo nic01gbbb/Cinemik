@@ -8,7 +8,7 @@ routesUsuario.delete(
   usuarioController.DeletarUsuario
 );
 routesUsuario.get(
-  "/LoginUser/:nome/:senha/:confirm/",
+  "/LoginUser/:nome/:senha/:confirm",
   usuarioController.LoginUser
 );
 

@@ -21,6 +21,11 @@ export default function VerificarSala() {
   const { Verusuario, setVerusuario, controle, setcontrole } =
     useContext(Appcontext);
 
+  const { dadosUsuarioPosição, setdadosUsuarioPosição } =
+    useContext(Appcontext);
+  const { dadosUsuarioPosiçãoCF, setdadosUsuarioPosiçãoCF } =
+    useContext(Appcontext);
+
   const voltarVs = () => {
     setVerusuario(false);
     setcontrole(true);
@@ -61,32 +66,26 @@ export default function VerificarSala() {
     console.log(verificarasala);
     if (verificarasala.data === "Usuário inválido") {
       setmsgNome("Usuário inválido");
+      return;
     }
     if (
       verificarasala.data ===
       "Não existe nenhum usuário com este nome registrado em nossa sessão"
     ) {
       setmsgNome("Não existe nenhum usuário com este nome em nossa sessão");
+      return;
     }
     if (verificarasala.data === "Senha inválida") {
       setmsgSenha("Senha inválida");
-    } else if (
-      verificarasala.data.findOnsection.concluida &&
-      nome &&
-      confirm &&
-      senha
-    ) {
-      setbox([verificarasala.data]);
-      setdadosusuarioNome(verificarasala.data.dadosUsuario);
+      return;
+    }
+
+    setdadosusuarioNome(verificarasala.data.dadosUsuario);
+    setdadosUsuarioPosiçãoCF(verificarasala.data.findOnsection.posição);
+    if (verificarasala.data.findOnsection.concluida) {
       setVsparaTabela(true);
     }
   };
-
-  useEffect(() => {
-    setnome("");
-    setsenha("");
-    setconfirm("");
-  }, [Verusuario]);
 
   return (
     <div

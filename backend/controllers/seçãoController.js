@@ -77,6 +77,7 @@ module.exports = {
   },
   Listsessaoforid: async (req, res) => {
     const { posicao } = req.params;
+
     const findsection = await sessãoModels.findOne({
       where: {
         posição: posicao,
