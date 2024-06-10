@@ -11,7 +11,7 @@ banco de dados,assim temos todo controle de acentos livres,ocupados ou para pess
 
 - Armazenar os dados da sessão do cinema
 - Armazenar os dados dos usuários
-- O usuário pode escolher seu acento de preferência, da cadeira "A" até a cadeira "M", e da fileira "0" até a "15"
+- O usuário pode escolher seu acento de preferência, da cadeira "A" até a cadeira "N", e da fileira "1" até a "15"
 - O usuário não pode escolher um acento que já esteja ocupado
 - O usuário não pode escolher um acento que seja próprio para pessoas especiais, caso ele não tenha nenhuma deficiência.
 - O usuário que for especial,possuir alguma deficiência,não pode escolher um acento comum.
