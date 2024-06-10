@@ -16,7 +16,7 @@ banco de dados,assim temos todo controle de acentos livres,ocupados ou para pess
 - O usuário não pode escolher um acento que seja próprio para pessoas especiais, caso ele não tenha nenhuma deficiência.
 - O usuário que for especial,possuir alguma deficiência,não pode escolher um acento comum.
 - O usuário que for especial,possuir alguma deficiência, não pode escolher um acento caso os acentos especiais estejam esgotados.
-- O usuário pode visualizar seu acento na tabela
+- O usuário pode visualizar seu acento na tabela.
 
 
  <h2>  Tecnologias utilizadas </h2>
